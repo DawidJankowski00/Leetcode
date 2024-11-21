@@ -1,0 +1,29 @@
+import sys
+import time
+from typing import List
+def main():
+    sol = Solution()
+    start = time.time()
+
+    print(sol.jump([2,3,1,1,4]))
+    print(time.time() - start)
+
+class Solution:
+    def jump(self, nums: List[int]) -> int:
+        jumps = 0
+        far = 0
+        near = 0
+        while far < len(nums)-1:
+            farthest = 0
+            for i in range(near, far+1):
+                farthest = max(farthest, i + nums[i])
+            near = far + 1
+            far = farthest
+            jumps += 1
+
+        return jumps
+            
+
+if __name__ == '__main__':
+    sys.exit(main())
+
