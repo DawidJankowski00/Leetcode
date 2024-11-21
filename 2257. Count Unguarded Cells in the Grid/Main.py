@@ -26,8 +26,9 @@ class Solution:
                         break
                     else:
                         matrix[x][y] = 1
-
+        self.writeMatrix(matrix)
         return sum(row.count(0) for row in matrix)
+    
     def writeMatrix(self, matrix):
         for v in matrix:
             print(v)
