@@ -19,19 +19,13 @@ class Solution:
             if b == target:
                 return state
             tmp = self.findSlide(b, p)
-            print(b)
-            print(p)
-            print(tmp)
-            print("\n")
             for item in tmp:
                 if str(item[0]) not in visited:
-
                     visited.add(str(item[0]))
                     queue.append([item[0], item[1], state+1])
 
-                    
-
         return -1
+    
     def getPosition(self, board):
         for i in range(len(board)):
             for j in range(len(board[0])):
