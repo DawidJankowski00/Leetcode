@@ -6,29 +6,15 @@ def main():
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        if len(s) == 0:
-            return 0
-        maxValue = 1
-        currentSubstring = 0
-        mapHas = {}
+        n = len(s)
+        max_len = 0
+        last_index = {}
         l = 0
-        r = 0
-        while len(s) > r:
-            if s[r] in mapHas:
-                mapHas[s[r]] += 1
-            else:
-                mapHas[s[r]] = 1
-            currentSubstring += 1
-            while mapHas[s[r]] > 1:
-                mapHas[s[l]] -= 1
-                l += 1
-                currentSubstring -= 1
-                
-            if currentSubstring > maxValue:
-                maxValue = currentSubstring
-            r += 1
-
-        return maxValue
+        for r in range(n):
+            l = max(l, last_index.get(s[r], 0))
+            max_len = max(max_len, r - l + 1)
+            last_index[s[r]] = r+1
+        return max_len
         
 
 if __name__ == '__main__':
