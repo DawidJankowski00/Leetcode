@@ -1,22 +1,20 @@
-
-
+from collections import defaultdict
+import sys
+import time
 from typing import List
-
-
 def main():
-    print(twoSum([3,2,4], 6))
+    sol = Solution()
+    start = time.time()
+    print(sol.twoSum([2,7,11,15],9))
+    print(time.time() - start)
 
-def twoSum(nums: List[int], target: int) -> List[int]:
-    result = []
-    for i in range(0, len(nums)):
-        for j in range(0, len(nums)):
-            if i == j:
-                continue
-            if nums[i] + nums[j] == target:
-                result.append(i)
-                result.append(j)
-                break
-        if len(result) > 0:
-            break
-    return result
-main()
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dic = defaultdict(int)
+        for i, v in enumerate(nums):
+            if target - v in dic:
+                return [dic[target-v], i]
+            dic[v] = i
+
+if __name__ == '__main__':
+    sys.exit(main())
