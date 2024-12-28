@@ -18,10 +18,20 @@ The solutions are organized by problem number and name:
 
 ```
 Solutions/
-├── 0001.Two_Sum.py
-├── 0002.Add_Two_Numbers.cpp
-├── 0003.Longest_Substring.java
-├── 0004.Median_of_Two_Sorted_Arrays.js
+├── 0001. Two Sum/
+├── 0002. Add Two Numbers/
+├── 0003. Longest Substring Without Repeating Characters/
+├── 0006. Zigzag Conversion/
+├── 0009. Palindrome Number/
+├── 0011. Container With Most Water/
+├── 0012. Integer to Roman/
+├── 0013. Roman to Integer/
+├── 0014. Longest Common Prefix/
+├── 0015. 3Sum/
+├── 0026. Remove Duplicates from Sorted Array/
+├── 0027. Remove Element/
+├── 0028. Find the Index of the First Occurrence in a String/
+├── 0030. Substring with Concatenation of All Words/
 └── ...
 ```
 
