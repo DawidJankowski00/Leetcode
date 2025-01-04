@@ -15,16 +15,13 @@ namespace Sample
             int stop = points[0][1];
             for (int i = 1; i < points.Length; i++)
             {
-                if (points[i][0] <= stop)
+                if (points[i][0] > stop)
                 {
-                    if (points[i][1] < stop) stop = points[i][1];
-                    continue;
-                }
-                else
-                {
+                    
                     stop = points[i][1];
                     result++;
                 }
+                
             }
             return result;
         }
