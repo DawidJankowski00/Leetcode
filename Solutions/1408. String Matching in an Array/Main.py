@@ -10,12 +10,8 @@ def main():
 
 class Solution:
     def stringMatching(self, words: List[str]) -> List[str]:
-        result = set()
-        for i in range(len(words)):
-            for v in words : 
-                if v  in words[i] and v != words[i]:
-                    result.add(v)
-        return list(result)  
+        st = " ".join(words)
+        return [v for v in words if st.count(v) >=2]
 
         
 
