@@ -21,15 +21,7 @@ class Solution:
         
 
     def isPrefixAndSuffix(self, str1: str, str2: str):
-        n = len(str1)
-        l = len(str2)
-        if n > len(str2):
-            return False
-        if str2[0:n] != str1:
-            return False
-        if str2[l-n:] != str1:
-            return False
-        return True
+        return str2.startswith(str1) and str2.endswith(str1)
         
 
 if __name__ == '__main__':
