@@ -22,30 +22,16 @@ def create_list_from_list(values):
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        result = None
-        tmp = []
-        while True:
-            if list1 == None:
-                if list2 == None:
-                    break
-                tmp.append(list2.val)
-                list2 = list2.next
-            elif list2 == None:
-                if list1 == None:
-                    break
-                tmp.append(list1.val)
-                list1 = list1.next
-            else:
-                if list1.val <= list2.val:
-                    tmp.append(list1.val)
-                    list1 = list1.next
-                else:
-                    tmp.append(list2.val)
-                    list2 = list2.next
-        tmp.reverse()
-        for v in tmp:
-            result = ListNode(v, result)
-        return result
+        if list1 == None:
+            return list2
+        if list2 == None:
+            return list1
+        if list1.val <= list2.val:
+            list1.next = self.mergeTwoLists(list1.next, list2)
+            return list1
+        else:
+            list2.next = self.mergeTwoLists(list1, list2.next)
+            return list2
         
 def main():
     sol = Solution()
