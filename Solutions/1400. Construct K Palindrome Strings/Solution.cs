@@ -14,18 +14,15 @@ namespace Sample
             if (n < k)
                 return false;
 
-            var chars = new Dictionary<char, int>();
+            var charArray = new int[26]; 
             foreach (char c in s)
             {
-                if (chars.ContainsKey(c))
-                    chars[c]++;
-                else
-                    chars[c] = 1;
+                charArray[c - 'a']++;
             }
             int odds = 0;
-            foreach (char c in chars.Keys)
+            foreach (int c in charArray)
             {
-                if (chars[c] % 2 == 1)
+                if (c % 2 == 1)
                     odds++;
             }
             if (odds > k)
