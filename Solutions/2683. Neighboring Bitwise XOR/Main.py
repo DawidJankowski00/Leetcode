@@ -9,10 +9,7 @@ def main():
 
 class Solution:
     def doesValidArrayExist(self, derived: List[int]) -> bool:
-        result = 0
-        for v in derived:
-            result ^= v
-        return result == 0
+        return sum(derived) % 2 == 0
         
 
 if __name__ == '__main__':
