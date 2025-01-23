@@ -12,33 +12,21 @@ class Solution:
         n = len(grid)
         m = len(grid[0])
         result = 0
-        for i in range(0, n):
-            first = (0, 0)
-            is_first_updated = False
-            curr_row = 0
-            for j in range(0, m):
+        for i in range(n):
+            count, col = 0, -1
+            for j in range(m):
                 if grid[i][j]:
-                    curr_row += 1
-                    if curr_row >= 2:
-                        if not is_first_updated:
-                            is_first_updated = True
-                            grid[first[0]][first[1]] = -1
-                            result += 1
+                    count += 1
+                    col = j
+            if count == 1:
+                for r in range(n):
+                    if r != i and grid[r][col]:
                         result += 1
-                        grid[i][j] = -1
-                    else:
-                        first = (i, j)
-        for i in range(0, m):
-            curr_col = 0
-            not_counted = 0
-            for j in range(0, n):
-                if grid[j][i] == 1 or grid[j][i] == -1:
-                    if grid[j][i] == 1:
-                        not_counted += 1
-                    curr_col += 1
-            if curr_col >= 2:
-                result += not_counted
+                        break
+            else:
+                result += count
         return result
+            
 
         
 
