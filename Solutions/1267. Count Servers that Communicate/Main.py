@@ -13,18 +13,18 @@ class Solution:
         m = len(grid[0])
         result = 0
         for i in range(n):
-            count, col = 0, -1
+            curr_row, col = 0, -1
             for j in range(m):
                 if grid[i][j]:
-                    count += 1
+                    curr_row += 1
                     col = j
-            if count == 1:
+            if curr_row == 1:
                 for r in range(n):
                     if r != i and grid[r][col]:
                         result += 1
                         break
             else:
-                result += count
+                result += curr_row
         return result
             
 
