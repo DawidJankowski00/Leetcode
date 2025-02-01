@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sample
+{
+    public class Solution {
+        public bool IsArraySpecial(int[] nums) {
+            for (int i = 1; i< nums.Length;i++ ){
+                if (nums[i-1] % 2 == nums[i] % 2)
+                    return false;
+            }
+            return true;
+        }
+    }
+}
