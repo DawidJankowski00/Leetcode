@@ -6,33 +6,20 @@ using System.Threading.Tasks;
 
 namespace Sample
 {
-    public class Solution
+    public class Solution 
     {
-        public bool Check(int[] nums)
+        public bool Check(int[] nums) 
         {
             int n = nums.Length;
-            int[] result = (int[])nums.Clone();
-            Array.Sort(result);
+            int count = 0;
             for (int i = 0; i < n; i++)
             {
-                if (Enumerable.SequenceEqual(result, Rotate(nums,i)))
-                {
-                    return true;
+                if (nums[i] > nums[(i + 1) % n]) 
+                {  
+                    count++; 
                 }
             }
-            return false;
+            return count <= 1;
         }
-        private int[] Rotate(int[] nums, int x) 
-        {
-            int n = nums.Length;
-            int[] result = new int[n];
-
-            for (int i = 0; i < n; i++)
-            {
-                result[i] = nums[(i+x) % n];
-            }
-            return result;
-        }
-
     }
 }
