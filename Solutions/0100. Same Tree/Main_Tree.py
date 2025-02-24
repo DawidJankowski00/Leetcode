@@ -44,19 +44,9 @@ class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
         if q == None and p == None:
             return True
-        if q == None or p == None:
+        if q == None or p == None or p.val != q.val:
             return False
-        def dfs(p, q):
-            if p.val != q.val:
-                return False
-            if p.left != None and q.left != None:
-                if p.right != None and q.right != None:
-                    return dfs(p.left,q.left) and dfs(p.right,q.right)
-                return p.right == None and q.right == None and dfs(p.left, q.left)
-            if p.right != None and q.right != None:
-                return  p.left == None and q.left == None and dfs(p.right,q.right)
-            return p.right == None and q.right == None and p.left == None and q.left == None
-        return dfs(p,q)
+        return self.isSameTree(p.left,q.left) and self.isSameTree(p.right, q.right)
 
         
 
