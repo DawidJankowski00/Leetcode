@@ -10,20 +10,13 @@ def main():
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         n = len(nums)
-        l = 0
-        r = 2
         result = 0
-        while r < n:
-            if nums[l] == 1:
-                l += 1
-                r += 1
-            else:
+        for i in range(0, n-2):
+            if nums[i] == 0:
                 result += 1
-                for i in range(l, r+1):
-                    if nums[i] == 0:
-                        nums[i] = 1
-                    else:
-                        nums[i] = 0
+                nums[i] = 1
+                nums[i+ 1] = 1 - nums[i+1]
+                nums[i+ 2] = 1 - nums[i+2]
         if nums[-1] == 1 and nums[-2] == 1:
             return result
         return -1
