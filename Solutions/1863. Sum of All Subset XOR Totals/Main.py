@@ -1,4 +1,5 @@
 from functools import reduce
+from operator import or_
 import sys
 import time
 from typing import List
