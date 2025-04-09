@@ -9,15 +9,9 @@ def main():
 
 class Solution:
     def minOperations(self, nums: List[int], k: int) -> int:
-        nums.sort(reverse=True)
-        result = 0
-        if nums[-1] < k:
+        if min(nums) < k:
             return -1
-        for i in range(1, len(nums)):
-            if nums[i] != nums[i-1]:
-                result += 1
-        if nums[-1] != k:
-            result += 1
+        result = len(set(nums)) + (min(nums) > k) - 1
         return result
         
 
