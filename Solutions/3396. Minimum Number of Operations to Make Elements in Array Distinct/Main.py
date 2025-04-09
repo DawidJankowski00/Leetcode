@@ -9,24 +9,13 @@ def main():
 
 class Solution:
     def minimumOperations(self, nums: List[int]) -> int:
-        ht = Counter(nums)
-        bad = 0
-        for v in ht.values():
-            if v != 1:
-                bad += 1
-        result = 0
-        while len(nums) > 3:
-            if bad == 0:
-                return result
-            for i in range(0, 3):
-                if ht[nums[i]] == 2:
-                    bad -= 1
-                ht[nums[i]] -= 1
-            result += 1
-            nums = nums[3:]
-        if bad != 0:
-            return result + 1
-        return result
+        ht = set()
+        for i in range(len(nums)-1,-1,-1):
+            if nums[i] in ht:
+                return i // 3 + 1
+            ht.add(nums[i])
+        return 0
+        
         
 
 if __name__ == '__main__':
