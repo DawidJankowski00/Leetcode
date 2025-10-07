@@ -5,13 +5,13 @@ from typing import List, Optional
 def main():
     sol = Solution()
     start = time.time()
-    print(sol.*****(create_list_from_list())
+    print(sol.*****(create_list_from_list()))
     print(time.time() - start)
 
 class ListNode:
-    def __init__(self, x):
+    def __init__(self, x = 0, next = None):
         self.val = x
-        self.next = None
+        self.next = next
 
 def create_list_from_list(values):
     if not values:
