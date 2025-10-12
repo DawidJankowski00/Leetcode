@@ -5,7 +5,7 @@ from typing import List, Optional
 def main():
     sol = Solution()
     start = time.time()
-    print(sol.*****(create_tree_from_list())
+    print(sol.*****(create_tree_from_list()))
     print(time.time() - start)
 
 class TreeNode:
