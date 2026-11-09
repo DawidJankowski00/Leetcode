@@ -1,8 +1,4 @@
-import sys
-from typing import List
-def main():
-    sol = Solution()
-    print(sol.makeFancyString("aaabaaaa"))
+﻿from typing import List
 
 class Solution:
     def makeFancyString(self, s: str) -> str:
@@ -18,8 +14,3 @@ class Solution:
             if k < 2:
                 newstring += s[i]
         return newstring
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

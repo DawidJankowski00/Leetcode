@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.longestConsecutive([0,3,7,2,5,8,4,6,0,1]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
@@ -24,7 +17,3 @@ class Solution:
         if result < tmp:
             result = tmp
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

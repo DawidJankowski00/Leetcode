@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.addSpaces("LeetcodeHelpsMeLearn", [8,13,15]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def addSpaces(self, s: str, spaces: List[int]) -> str:
@@ -19,6 +12,3 @@ class Solution:
                     t += " "
             t += v
         return t
-
-if __name__ == '__main__':
-    sys.exit(main())

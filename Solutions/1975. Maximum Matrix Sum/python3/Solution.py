@@ -1,12 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    
-    print(sol.maxMatrixSum([[0,0,0],[0,0,0],[0,0,0]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def maxMatrixSum(self, matrix: List[List[int]]) -> int:
@@ -27,6 +19,3 @@ class Solution:
             return result
         else:
             return result - lowest *2
-
-if __name__ == '__main__':
-    sys.exit(main())

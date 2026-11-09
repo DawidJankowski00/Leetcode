@@ -1,12 +1,5 @@
-from collections import deque
-import sys
-import time
+﻿from collections import deque
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.maximumInvitations([2,2,1,2]))
-    print(time.time() - start)
 
 class Solution(object):
     def maximumInvitations(self, favorite):
@@ -48,8 +41,3 @@ class Solution(object):
                     largest_cycle = max(largest_cycle, cycle_size)
 
         return max(largest_cycle, combined_pairs)
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

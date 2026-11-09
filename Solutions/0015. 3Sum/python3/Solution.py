@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.threeSum([-1,0,1,2,-1,-4]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
@@ -31,7 +24,3 @@ class Solution:
                 else:
                     j += 1
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

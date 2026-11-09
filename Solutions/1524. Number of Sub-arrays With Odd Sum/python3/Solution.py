@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.numOfSubarrays([1,2,3,4,5,6,7]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def numOfSubarrays(self, arr: List[int]) -> int:
@@ -17,7 +10,3 @@ class Solution:
             ct += curr % 2
         ct += (len(arr) - ct) * ct
         return ct % mod
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

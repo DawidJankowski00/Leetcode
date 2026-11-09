@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.findMissingAndRepeatedValues([[9,1,7],[8,9,2],[3,4,6]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def findMissingAndRepeatedValues(self, grid: List[List[int]]) -> List[int]:
@@ -24,7 +17,3 @@ class Solution:
                 result.append(i)
                 break
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

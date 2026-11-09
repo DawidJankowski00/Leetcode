@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minimumRecolors("WBBWWBBWBW",7))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def minimumRecolors(self, blocks: str, k: int) -> int:
@@ -23,6 +16,3 @@ class Solution:
             l += 1
             r += 1
         return result
-
-if __name__ == '__main__':
-    sys.exit(main())

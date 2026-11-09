@@ -1,8 +1,4 @@
-import sys
-from typing import List
-def main():
-    sol = Solution()
-    print(sol.decrypt([2,4,9,3], -2))
+﻿from typing import List
 
 class Solution:
     def decrypt(self, code: List[int], k: int) -> List[int]:
@@ -28,10 +24,3 @@ class Solution:
                     tmp += code[i-j]
                 result.append(tmp)
         return result
-            
-
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

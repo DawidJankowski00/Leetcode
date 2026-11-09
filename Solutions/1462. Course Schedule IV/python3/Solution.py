@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.checkIfPrerequisite(2,[[1,0]],[[0,1],[1,0]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def checkIfPrerequisite(self, numCourses: int, prerequisites: List[List[int]], queries: List[List[int]]) -> List[bool]:
@@ -21,7 +14,3 @@ class Solution:
                         reachable[i][j] = True
 
         return [reachable[u][v] for u, v in queries]
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.intToRoman(3749))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def intToRoman(self, num: int) -> str:
@@ -24,8 +17,3 @@ class Solution:
                 result += values[10**i]
                 num -= 10**i
         return result.replace("CCCCCCCCC", "CM").replace("CCCCC", "D").replace("CCCC", "CD").replace("XXXXXXXXX", "XC").replace("XXXXX", "L").replace("XXXX", "XL").replace("IIIIIIIII", "IX").replace("IIIII", "V").replace("IIII", "IV")
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

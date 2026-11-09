@@ -1,13 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    
-    print(sol.rotateTheBox([["#",".","*","."],
-              ["#","#","*","."]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def rotateTheBox(self, box: List[List[str]]) -> List[List[str]]:
@@ -33,6 +24,3 @@ class Solution:
             for j in range(m):
                 rotatedBox[i][j] = box[m-1-j][i]
         return rotatedBox
-
-if __name__ == '__main__':
-    sys.exit(main())

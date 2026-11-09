@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.countGoodTriplets([1,1,2,2,3],0,0,1))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
@@ -18,5 +11,3 @@ class Solution:
                         if abs(arr[j] - arr[k]) <= b and abs(arr[i] - arr[k]) <= c:
                             result += 1
         return result
-if __name__ == '__main__':
-    sys.exit(main())

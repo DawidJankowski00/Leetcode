@@ -1,12 +1,5 @@
-from collections import deque
-import sys
-import time
+﻿from collections import deque
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))
-    print(time.time() - start)
 
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
@@ -27,6 +20,3 @@ class Solution:
             else:
                 stack.appendleft(int(v))
         return stack.popleft()
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.summaryRanges([0,2,3,4,6,8,9]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def summaryRanges(self, nums: List[int]) -> List[str]:
@@ -28,8 +21,4 @@ class Solution:
             result.append(str(nums[l]))
         else:
             result.append(str(nums[l]) + "->" + str(nums[last]))
-        return result 
-        
-
-if __name__ == '__main__':
-    sys.exit(main())
+        return result

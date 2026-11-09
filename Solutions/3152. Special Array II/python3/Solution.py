@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.isArraySpecial([4,3,1,6], [[0,2],[2,3]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def isArraySpecial(self, nums: List[int], queries: List[List[int]]) -> List[bool]:
@@ -19,6 +12,3 @@ class Solution:
         for l, r in queries:
             result.append(prefix[r]-prefix[l] == 0)
         return result
-
-if __name__ == '__main__':
-    sys.exit(main())

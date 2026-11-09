@@ -1,12 +1,5 @@
-from collections import defaultdict
-import sys
-import time
+﻿from collections import defaultdict
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.maximumLength("aaaa"))
-    print(time.time() - start)
 
 class Solution:
     def maximumLength(self, s: str) -> int:
@@ -38,8 +31,3 @@ class Solution:
                 return True
 
         return False
-        
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

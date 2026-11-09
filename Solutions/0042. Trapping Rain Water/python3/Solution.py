@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.trap([2,1,0,1,3,2]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def trap(self, height: List[int]) -> int:
@@ -26,8 +19,3 @@ class Solution:
                     maxleft = height[l]
                 water += maxleft - height[l] 
         return water
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

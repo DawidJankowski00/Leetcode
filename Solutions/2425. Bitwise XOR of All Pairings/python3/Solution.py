@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.xorAllNums([2,1,3],[10,2,5,0]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def xorAllNums(self, nums1: List[int], nums2: List[int]) -> int:
@@ -20,7 +13,3 @@ class Solution:
             for v in nums1:
                 result ^= v
         return result ^ result2
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minZeroArray([2,0,2],[[0,2,1],[0,2,1],[1,1,3]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def minZeroArray(self, nums: List[int], queries: List[List[int]]) -> int:
@@ -30,8 +23,3 @@ class Solution:
             if current_sum < num:
                 return -1
         return query_index
-        
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

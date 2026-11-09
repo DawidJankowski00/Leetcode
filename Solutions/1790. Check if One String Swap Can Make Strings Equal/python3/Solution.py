@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.areAlmostEqual("bank","kanb"))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def areAlmostEqual(self, s1: str, s2: str) -> bool:
@@ -28,8 +21,3 @@ class Solution:
         if diff_chars_count == 1:
             return False
         return True
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

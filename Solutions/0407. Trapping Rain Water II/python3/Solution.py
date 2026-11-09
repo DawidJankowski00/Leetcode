@@ -1,12 +1,5 @@
-import sys
-import time
-from typing import List
+﻿from typing import List
 import heapq
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.trapRainWater([[1,4,3,1,3,2],[3,2,1,3,2,4],[2,3,3,2,3,1]]))
-    print(time.time() - start)
 
 class Solution:
     def trapRainWater(self, height_map: List[List[int]]) -> int:
@@ -46,7 +39,3 @@ class Solution:
                     height_map[nx][ny] = -1
 
         return water_trapped
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

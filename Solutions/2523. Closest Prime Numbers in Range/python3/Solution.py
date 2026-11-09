@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.closestPrimes(10, 19))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def closestPrimes(self, left: int, right: int) -> List[int]:
@@ -27,6 +20,3 @@ class Solution:
                 dif = tmp
                 result = [primes[i-1], primes[i]]
         return result
-
-if __name__ == '__main__':
-    sys.exit(main())

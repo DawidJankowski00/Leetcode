@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.punishmentNumber(1000))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def punishmentNumber(self, n: int) -> int:
@@ -20,8 +13,3 @@ class Solution:
             return False
         
         return sum(square for num in range(1, n + 1) if is_partition_valid(square := num * num, num))
-        
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

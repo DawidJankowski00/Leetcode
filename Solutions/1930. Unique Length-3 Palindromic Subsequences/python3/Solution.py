@@ -1,13 +1,6 @@
-from collections import Counter, defaultdict
+﻿from collections import Counter, defaultdict
 from email.policy import default
-import sys
-import time
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.countPalindromicSubsequence("aabca"))
-    print(time.time() - start)
 
 class Solution:
     def countPalindromicSubsequence(self, s: str) -> int:
@@ -19,6 +12,3 @@ class Solution:
             if l != r:
                 result += len(set(s[l+1:r]))
         return result
-
-if __name__ == '__main__':
-    sys.exit(main())

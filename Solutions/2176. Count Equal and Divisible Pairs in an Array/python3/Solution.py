@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.countPairs([3,1,2,2,2,1,3],2))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def countPairs(self, nums: List[int], k: int) -> int:
@@ -17,7 +10,3 @@ class Solution:
                     if (i * j) % k == 0:
                         result += 1
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

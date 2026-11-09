@@ -1,12 +1,5 @@
-from collections import deque
-import sys
-import time
+﻿from collections import deque
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.magnificentSets(6, [[1,2],[1,4],[1,5],[2,6],[2,3],[4,6]]))
-    print(time.time() - start)
 
 class Solution:
     def magnificentSets(self, n: int, edges: List[List[int]]) -> int:
@@ -52,7 +45,3 @@ class Solution:
             return max_depth
         
         return sum(max(bfs(node) for node in group) for group in groups)
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,13 +1,6 @@
-from collections import Counter
+﻿from collections import Counter
 import heapq
-import sys
-import time
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.repeatLimitedString("cczazcc",3))
-    print(time.time() - start)
 
 class Solution:
     def repeatLimitedString(self, s: str, repeatLimit: int) -> str:
@@ -37,7 +30,3 @@ class Solution:
                         result += chr(-k)
                 last = k
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

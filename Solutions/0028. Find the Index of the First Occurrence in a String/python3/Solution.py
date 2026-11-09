@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.strStr("sadbutsad", "sad"))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
@@ -14,8 +7,3 @@ class Solution:
             if haystack[i:n+i] == needle:
                 return i
         return -1
-        
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

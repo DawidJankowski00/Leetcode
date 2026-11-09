@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.vowelStrings(["aba","bcb","ece","aa","e"],[[0,2],[1,4],[1,1]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def vowelStrings(self, words: List[str], queries: List[List[int]]) -> List[int]:
@@ -21,7 +14,3 @@ class Solution:
         for x, y in queries:
             result.append(pre_sum[y+1]- pre_sum[x])
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

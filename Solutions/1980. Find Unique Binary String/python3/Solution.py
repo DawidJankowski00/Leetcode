@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.findDifferentBinaryString(["111","011","001"]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def findDifferentBinaryString(self, nums: List[str]) -> str:
@@ -24,9 +17,3 @@ class Solution:
         while len(result) != n:
             result = '0' + result
         return result
-
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

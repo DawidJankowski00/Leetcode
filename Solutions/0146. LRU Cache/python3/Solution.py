@@ -1,30 +1,12 @@
-from collections import deque
-import sys
-import time
+﻿from collections import deque
 from typing import List, Optional
 from collections import OrderedDict
-
-def main():
-    sol = LRUCache(4)
-    start = time.time()
-    print(sol.put(1,1))
-    print(time.time() - start)
 
 class ListNode:
     def __init__(self, x = 0, next = None):
         self.val = x
         self.next = next
 
-def create_list_from_list(values):
-    if not values:
-        return None  
-
-    head = ListNode(values[0])  
-    current = head
-    for value in values[1:]:
-        current.next = ListNode(value)  
-        current = current.next  
-    return head
 class Node:
     def __init__(self, key, val):
         self.key = key
@@ -73,9 +55,3 @@ class LRUCache:
             self.delNode(self.tail.prev)
         self.addNode(Node(key, value))
         self.data[key] = self.head.next
-        
-            
-            
-
-if __name__ == '__main__':
-    sys.exit(main())

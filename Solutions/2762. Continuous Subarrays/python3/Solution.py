@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.continuousSubarrays([5,4,2,4]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def continuousSubarrays(self, nums):
@@ -34,7 +27,3 @@ class Solution:
                 result += (i - j + 1)
 
         return result
-
-
-if __name__ == '__main__':
-    sys.exit(main())

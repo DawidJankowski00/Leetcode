@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.maxScore("011101"))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def maxScore(self, s: str) -> int:
@@ -26,7 +19,3 @@ class Solution:
             if result < r + l:
                 result = r + l
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

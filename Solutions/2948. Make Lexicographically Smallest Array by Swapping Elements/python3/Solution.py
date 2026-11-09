@@ -1,12 +1,5 @@
-from collections import defaultdict
-import sys
-import time
+﻿from collections import defaultdict
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.lexicographicallySmallestArray([1,5,3,9,8],2))
-    print(time.time() - start)
 
 class Solution:
     def lexicographicallySmallestArray(self, nums: List[int], limit: int) -> List[int]:
@@ -29,7 +22,3 @@ class Solution:
             for i in range(len(ind)):
                 nums[ind[i]] = t[i][0]
         return nums
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

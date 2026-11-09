@@ -1,12 +1,5 @@
-import sys
-import time
-from collections import deque
+﻿from collections import deque
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minimumObstacles([[0,1,1],[1,1,0],[1,1,0]]))
-    print(time.time() - start)
 
 class Solution:
     def minimumObstacles(self, grid: List[List[int]]) -> int:
@@ -34,8 +27,3 @@ class Solution:
                             queue.appendleft([newx, newy, dist])
                         else:
                             queue.append([newx, newy, dist + 1])
-
-
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,12 +1,5 @@
-from collections import defaultdict, Counter
-import sys
-import time
+﻿from collections import defaultdict, Counter
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.wordSubsets(["amazon","apple","facebook","google","leetcode"],["e","o"]))
-    print(time.time() - start)
 
 class Solution:
     def wordSubsets(self, words1: List[str], words2: List[str]) -> List[str]:
@@ -26,8 +19,3 @@ class Solution:
             if test:
                 result.append(v)
         return result
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

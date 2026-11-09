@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.countPrefixSuffixPairs(["a","aba","ababa","aa"]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def countPrefixSuffixPairs(self, words: List[str]) -> int:
@@ -22,7 +15,3 @@ class Solution:
 
     def isPrefixAndSuffix(self, str1: str, str2: str):
         return str2.startswith(str1) and str2.endswith(str1)
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

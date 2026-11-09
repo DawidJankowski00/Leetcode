@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.maxAbsoluteSum([2,-5,1,-4,3,-2]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def maxAbsoluteSum(self, nums: List[int]) -> int:
@@ -17,6 +10,3 @@ class Solution:
             maxcurr = max(curr, maxcurr)
             mincurr = min(curr, mincurr)
         return abs(maxcurr - mincurr)
-
-if __name__ == '__main__':
-    sys.exit(main())

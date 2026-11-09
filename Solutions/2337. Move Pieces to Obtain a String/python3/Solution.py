@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.canChange("_L__R__R_", "L______RR"))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def canChange(self, start: str, target: str) -> bool:
@@ -28,7 +21,3 @@ class Solution:
             j += 1
             i += 1
         return True
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

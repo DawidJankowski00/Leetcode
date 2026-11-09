@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.isPrefixOfWord("i love eating burger", "burg"))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:
@@ -15,7 +8,3 @@ class Solution:
             if w[0:m] == searchWord:
                 return i + 1
         return -1
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

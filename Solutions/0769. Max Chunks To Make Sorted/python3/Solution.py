@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.maxChunksToSorted([4,3,2,1,0]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def maxChunksToSorted(self, arr: List[int]) -> int:
@@ -19,7 +12,3 @@ class Solution:
             if needed_sum == curr:
                 result += 1
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

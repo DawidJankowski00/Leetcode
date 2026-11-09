@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.findChampion(3, [[0,1],[1,2]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def findChampion(self, n: int, edges: List[List[int]]) -> int:
@@ -18,9 +11,3 @@ class Solution:
         if len(tab.keys()) == 1:
             return list(tab.keys())[0]
         return -1
-
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

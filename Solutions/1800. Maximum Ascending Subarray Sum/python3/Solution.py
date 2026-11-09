@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.maxAscendingSum([10,20,30,5,10,50]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def maxAscendingSum(self, nums: List[int]) -> int:
@@ -19,7 +12,3 @@ class Solution:
                 result = max(result, tmp)
                 tmp = nums[i]
         return max(result, tmp)
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,9 +1,4 @@
-import sys
-def main():
-    sol = Solution()
-    print(sol.romanToInt("MCMXCIV"))
-
-class Solution:
+﻿class Solution:
     def romanToInt(self, s: str) -> int:
         values = {
             "I": 1,
@@ -19,7 +14,3 @@ class Solution:
         for i in s:
             v += values[i]
         return v
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.maxScoreSightseeingPair([8,1,5,2,6]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def maxScoreSightseeingPair(self, values: List[int]) -> int:
@@ -15,9 +8,3 @@ class Solution:
             score=max(score, dp+x-i)
             dp=max(dp, x+i)
         return score
-        
-        
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.*****())
-    print(time.time() - start)
+﻿from typing import List
 
 class FindElements:
 
@@ -25,9 +18,5 @@ class FindElements:
             self.tab[0] = True
             rec(0, root)
 
-
     def find(self, target: int) -> bool:
         return target in self.tab
-
-if __name__ == '__main__':
-    sys.exit(main())

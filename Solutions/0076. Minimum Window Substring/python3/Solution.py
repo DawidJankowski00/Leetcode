@@ -1,12 +1,5 @@
-from collections import Counter, defaultdict
-import sys
-import time
+﻿from collections import Counter, defaultdict
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minWindow("ADOBECODEBANC", "ABC"))
-    print(time.time() - start)
 
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
@@ -46,7 +39,3 @@ class Solution:
                     result = w
                 l += 1
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

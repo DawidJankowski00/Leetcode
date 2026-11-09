@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.shortestCommonSupersequence("abac","cab"))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def shortestCommonSupersequence(self, text1: str, text2: str) -> str:
@@ -43,8 +36,3 @@ class Solution:
             idx2 -= 1
         
         return ''.join(supersequence[::-1])
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

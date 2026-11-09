@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.canMakeSubsequence("zabc", "ad"))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def canMakeSubsequence(self, str1: str, str2: str) -> bool:
@@ -16,7 +9,3 @@ class Solution:
                 j += 1
             i += 1
         return j == len(str2)
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

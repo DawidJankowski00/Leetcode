@@ -1,12 +1,5 @@
-from collections import defaultdict, deque
-import sys
-import time
+﻿from collections import defaultdict, deque
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minimumDiameterAfterMerge([[0,1],[0,2],[0,3]],[[0,1]]))
-    print(time.time() - start)
 
 class Solution:
     def tree_diameter(self, edges):
@@ -34,7 +27,6 @@ class Solution:
             graph[u].append(v)
             graph[v].append(u)
 
-
         farthest_node, _ = bfs(0)
 
         _, diameter = bfs(farthest_node)
@@ -44,7 +36,3 @@ class Solution:
         D1 = self.tree_diameter(edges1)
         D2 = self.tree_diameter(edges2)
         return max(D1, D2, (D1+1)//2+(D2+1)//2+1)
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

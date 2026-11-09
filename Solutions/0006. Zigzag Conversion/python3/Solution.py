@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.convert("PAYPALISHIRING", 3))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
@@ -25,7 +18,3 @@ class Solution:
                 state = not state
             
         return "".join(result)
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

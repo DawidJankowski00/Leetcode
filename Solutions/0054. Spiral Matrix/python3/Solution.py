@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.spiralOrder([[1,2,3],[4,5,6],[7,8,9]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
@@ -32,7 +25,3 @@ class Solution:
                     result.append(matrix[i][col_begin])
                 col_begin += 1
         return result
-            
-
-if __name__ == '__main__':
-    sys.exit(main())

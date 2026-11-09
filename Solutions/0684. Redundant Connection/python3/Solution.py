@@ -1,12 +1,5 @@
-from collections import defaultdict
-import sys
-import time
+﻿from collections import defaultdict
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.findRedundantConnection([[1,2],[1,3],[2,3]]))
-    print(time.time() - start)
 
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
@@ -28,7 +21,3 @@ class Solution:
                 return [a, b]
             graph[a].append(b)
             graph[b].append(a)
-
-
-if __name__ == '__main__':
-    sys.exit(main())

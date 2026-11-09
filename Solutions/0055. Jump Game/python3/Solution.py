@@ -1,12 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-
-    print(sol.canJump([2,3,1,1,4]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
@@ -18,8 +10,3 @@ class Solution:
                 start = i
             start -= 1
         return True
-            
-
-if __name__ == '__main__':
-    sys.exit(main())
-

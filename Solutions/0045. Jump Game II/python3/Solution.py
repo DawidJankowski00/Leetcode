@@ -1,12 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-
-    print(sol.jump([2,3,1,1,4]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def jump(self, nums: List[int]) -> int:
@@ -22,8 +14,3 @@ class Solution:
             jumps += 1
 
         return jumps
-            
-
-if __name__ == '__main__':
-    sys.exit(main())
-

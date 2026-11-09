@@ -1,12 +1,5 @@
-from collections import deque
-import sys
-import time
+﻿from collections import deque
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.largestIsland([[1,0],[0,1]]))
-    print(time.time() - start)
 
 class Solution:
     def largestIsland(self, grid: List[List[int]]) -> int:
@@ -49,10 +42,3 @@ class Solution:
             if tmp > result:
                 result = tmp
         return result
-
-        
-        
-
-
-if __name__ == '__main__':
-    sys.exit(main())

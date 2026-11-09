@@ -1,8 +1,4 @@
-import sys
-from typing import List
-def main():
-    sol = Solution()
-    print(sol.maximumSubarraySum([1,5,4,2,9,9,9], 3))
+﻿from typing import List
 
 class Solution:
     def maximumSubarraySum(self, nums: List[int], k: int) -> int:
@@ -32,7 +28,3 @@ class Solution:
                 if maxValue < currentValue:
                     maxValue = currentValue
         return maxValue
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

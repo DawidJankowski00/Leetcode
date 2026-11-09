@@ -1,12 +1,5 @@
-import sys
-import time
-from typing import List
+﻿from typing import List
 from collections import Counter
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minimumLength("abaacbcbb"))
-    print(time.time() - start)
 
 class Solution:
     def minimumLength(self, s: str) -> int:
@@ -18,7 +11,3 @@ class Solution:
             elif tmp != 0:
                 result += 2
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

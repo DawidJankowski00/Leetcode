@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.maxCount([1,6,5],5,7))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def maxCount(self, banned: List[int], n: int, maxSum: int) -> int:
@@ -20,8 +13,3 @@ class Solution:
                 break
             nums += 1
         return nums
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

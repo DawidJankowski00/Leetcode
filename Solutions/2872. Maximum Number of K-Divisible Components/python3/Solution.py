@@ -1,12 +1,5 @@
-from collections import defaultdict, deque
-import sys
-import time
+﻿from collections import defaultdict, deque
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.maxKDivisibleComponents(5, [[0,2],[1,2],[1,3],[2,4]], [1,8,1,4,4], 6))
-    print(time.time() - start)
 
 class Solution:
     def maxKDivisibleComponents(self, n: int, edges: List[List[int]], values: List[int], k: int) -> int:
@@ -36,7 +29,4 @@ class Solution:
                     values[parent] += values[node]
             else:
                 result += 1
-        return result        
-
-if __name__ == '__main__':
-    sys.exit(main())
+        return result

@@ -1,12 +1,5 @@
-import heapq
-import sys
-import time
+﻿import heapq
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.leftmostBuildingQueries([6,4,8,5,2,7],[[0,1],[0,3],[2,4],[3,4],[2,2]]))
-    print(time.time() - start)
 
 class Solution:
     def leftmostBuildingQueries(self, heights: List[int], queries: List[List[int]]) -> List[int]:
@@ -40,6 +33,3 @@ class Solution:
                 result[query_index] = i
 
         return result
-
-if __name__ == '__main__':
-    sys.exit(main())

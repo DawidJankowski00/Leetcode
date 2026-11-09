@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minOperations([0,1,1,1,0,0]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
@@ -20,6 +13,3 @@ class Solution:
         if nums[-1] == 1 and nums[-2] == 1:
             return result
         return -1
-
-if __name__ == '__main__':
-    sys.exit(main())

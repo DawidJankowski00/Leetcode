@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.gridGame([[1,3,1,15],[1,3,3,1]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def gridGame(self, grid: List[List[int]]) -> int:
@@ -20,8 +13,3 @@ class Solution:
             maxpoints = min(maxpoints, max(lsum, rsum))
             lsum += grid[1][i]
         return maxpoints
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

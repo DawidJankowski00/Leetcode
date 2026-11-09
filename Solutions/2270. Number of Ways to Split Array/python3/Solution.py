@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.waysToSplitArray([10,4,-8,7]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def waysToSplitArray(self, nums: List[int]) -> int:
@@ -18,6 +11,3 @@ class Solution:
             if cur_sum_l >= cur_sum_r:
                 result += 1
         return result
-    
-if __name__ == '__main__':
-    sys.exit(main())

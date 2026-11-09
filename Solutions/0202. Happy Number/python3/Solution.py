@@ -1,12 +1,5 @@
-from collections import defaultdict
-import sys
-import time
+﻿from collections import defaultdict
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.isHappy(19))
-    print(time.time() - start)
 
 class Solution:
     def isHappy(self, n: int) -> bool:
@@ -22,7 +15,3 @@ class Solution:
                 n = n // 10
             n = tmp
         return False
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

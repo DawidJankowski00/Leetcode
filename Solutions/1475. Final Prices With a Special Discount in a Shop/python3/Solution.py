@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.finalPrices([8,4,6,2,3]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def finalPrices(self, prices: List[int]) -> List[int]:
@@ -19,7 +12,3 @@ class Solution:
                 else:
                     r += 1
         return prices
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

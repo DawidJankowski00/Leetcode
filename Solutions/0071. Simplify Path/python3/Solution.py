@@ -1,12 +1,5 @@
-from collections import deque
-import sys
-import time
+﻿from collections import deque
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.simplifyPath("/a/./b/../../c/"))
-    print(time.time() - start)
 
 class Solution:
     def simplifyPath(self, path: str) -> str:
@@ -22,7 +15,3 @@ class Solution:
                 stack.appendleft(v)
         stack.reverse()
         return "/" + "/".join(stack)
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

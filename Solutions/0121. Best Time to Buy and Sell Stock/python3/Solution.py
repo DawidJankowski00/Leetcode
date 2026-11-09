@@ -1,12 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-
-    print(sol.maxProfit([7,1,5,3,6,4]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
@@ -18,8 +10,3 @@ class Solution:
             if max < item - min:
                 max = item - min
         return max
-            
-
-if __name__ == '__main__':
-    sys.exit(main())
-

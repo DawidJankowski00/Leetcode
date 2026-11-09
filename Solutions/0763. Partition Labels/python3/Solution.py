@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.partitionLabels("ababcbacadefegdehijhklij"))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def partitionLabels(self, s: str) -> List[int]:
@@ -21,7 +14,3 @@ class Solution:
                 result.append(i-l+1)
                 l = i+1
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

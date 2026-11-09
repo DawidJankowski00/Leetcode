@@ -1,12 +1,5 @@
-import sys
-import time
-from typing import List
+﻿from typing import List
 from collections import defaultdict
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.findThePrefixCommonArray([1,3,2,4],[3,1,2,4]))
-    print(time.time() - start)
 
 class Solution:
     def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
@@ -25,8 +18,3 @@ class Solution:
                 if nums[B[i]] == 2:
                     result[i] += 1
         return result
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

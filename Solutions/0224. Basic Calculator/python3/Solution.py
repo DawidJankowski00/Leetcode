@@ -1,12 +1,5 @@
-import sys
-import time
-from typing import List
+﻿from typing import List
 from collections import deque
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.calculate("1 + 1"))
-    print(time.time() - start)
 
 class Solution:
     def calculate(self, s: str) -> int:
@@ -31,7 +24,3 @@ class Solution:
                 sign = -1 * stack[0]
                 curr = 0
         return result + sign * curr
-            
-
-if __name__ == '__main__':
-    sys.exit(main())

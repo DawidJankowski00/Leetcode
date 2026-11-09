@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.countGoodStrings(3,3,1,1))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def countGoodStrings(self, low: int, high: int, zero: int, one: int) -> int:
@@ -22,6 +15,3 @@ class Solution:
         for i in range(low, high + 1):
             result = (result + dp[i]) % mod
         return result
-
-if __name__ == '__main__':
-    sys.exit(main())

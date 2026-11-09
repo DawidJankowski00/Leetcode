@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minOperations("110"))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def minOperations(self, boxes: str) -> List[int]:
@@ -26,8 +19,3 @@ class Solution:
                 ball += 1
             curr += ball
         return result
-            
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

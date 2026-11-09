@@ -1,12 +1,5 @@
-from collections import defaultdict
-import sys
-import time
+﻿from collections import defaultdict
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.mostProfitablePath([[0,1],[1,2],[1,3],[3,4]], 3, [-2,4,2,-4,6]))
-    print(time.time() - start)
 
 class Solution:
     def mostProfitablePath(self, edges: List[List[int]], bob: int, amount: List[int]) -> int:
@@ -35,7 +28,6 @@ class Solution:
             is_leaf = True
             max_profit = float('-inf')
 
-
             if node in bob_time:
                 if bob_time[node] > time:
                     net_amount = amount[node]  
@@ -54,8 +46,3 @@ class Solution:
             return net_amount if is_leaf else net_amount + max_profit
 
         return dfs_alice(0, -1, 0)
-
-
-
-if __name__ == '__main__':
-    sys.exit(main())

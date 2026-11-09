@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minimumSize([9], 2))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def minimumSize(self, nums: List[int], maxOperations: int) -> int:
@@ -21,9 +14,3 @@ class Solution:
             else:
                 r = mid
         return l
-
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

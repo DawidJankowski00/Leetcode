@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.maximumTripletValue([12,6,1,2,7]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def maximumTripletValue(self, nums: List[int]) -> int:
@@ -19,6 +12,3 @@ class Solution:
             maxvalue = max(maxvalue, nums[i])
 
         return result
-
-if __name__ == '__main__':
-    sys.exit(main())

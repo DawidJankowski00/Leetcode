@@ -1,12 +1,5 @@
-import sys
-import time
-from typing import List
+﻿from typing import List
 from collections import Counter
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.canConstruct("cxayrgpcctwlfupgzirmazszgfiusitvzsnngmivctprcotcuutfxdpbrdlqukhxkrmpwqqwdxxrptaftpnilfzcmknqljgbfkzuhksxzplpoozablefndimqnffrqfwgaixsovmmilicjwhppikryerkdidupvzdmoejzczkbdpfqkgpbxcrxphhnxfazovxbvaxyxhgqxcxirjsryqxtreptusvupsstylpjniezyfokbowpbgxbtsemzsvqzkbrhkvzyogkuztgfmrprz",5))
-    print(time.time() - start)
 
 class Solution:
     def canConstruct(self, s: str, k: int) -> bool:
@@ -21,7 +14,3 @@ class Solution:
         if k < odds:
             return False
         return True
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

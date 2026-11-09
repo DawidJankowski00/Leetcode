@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.applyOperations([1,2,2,1,1,0]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def applyOperations(self, nums: List[int]) -> List[int]:
@@ -26,7 +19,3 @@ class Solution:
         for i in range(0, z):
             result.append(0)
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import Counter, List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.countCompleteSubarrays([1,3,1,2,2]))
-    print(time.time() - start)
+﻿from typing import Counter, List
 
 class Solution:
     def countCompleteSubarrays(self, nums: List[int]) -> int:
@@ -24,6 +17,3 @@ class Solution:
                 l += 1
                 result += n - r
         return result
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,14 +1,3 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.*****())
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

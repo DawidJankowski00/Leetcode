@@ -1,12 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-
-    print(sol.maxEqualRowsAfterFlips([[0,0,0],[0,0,1],[1,1,0]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
@@ -23,9 +15,3 @@ class Solution:
             else:
                 mytable[tmp] = 1
         return max(mytable.values())
-
-
-
-if __name__ == '__main__':
-    sys.exit(main())
-

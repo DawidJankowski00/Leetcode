@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.setZeroes([[1,1,1],[1,0,1],[1,1,1]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
@@ -36,7 +29,3 @@ class Solution:
         if row:
             for i in range(m):
                 matrix[0][i] = 0
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

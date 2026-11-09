@@ -1,13 +1,6 @@
-from collections import defaultdict
+﻿from collections import defaultdict
 import heapq
-import sys
-import time
 from typing import List
-def main():
-    sol = NumberContainers()
-    start = time.time()
-    print(sol.find(10))
-    print(time.time() - start)
 
 class NumberContainers:
 
@@ -28,8 +21,3 @@ class NumberContainers:
                 return i
             heapq.heappop(self.index[number])
         return -1
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

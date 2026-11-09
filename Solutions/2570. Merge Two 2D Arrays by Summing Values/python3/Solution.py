@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.mergeArrays([[1,2],[2,3],[4,5]],[[1,4],[3,2],[4,1]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def mergeArrays(self, nums1: List[List[int]], nums2: List[List[int]]) -> List[List[int]]:
@@ -21,6 +14,3 @@ class Solution:
         for i in sorted(tab.keys()):
             result.append([i, tab[i]])
         return result
-
-if __name__ == '__main__':
-    sys.exit(main())

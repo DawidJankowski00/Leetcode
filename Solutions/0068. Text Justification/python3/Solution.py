@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.fullJustify(["What","must","be","acknowledgment","shall","be"], 16))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def fullJustify(self, words: List[str], maxWidth: int) -> List[str]:
@@ -36,7 +29,3 @@ class Solution:
             tmp += " " * s
             result.append(tmp)
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

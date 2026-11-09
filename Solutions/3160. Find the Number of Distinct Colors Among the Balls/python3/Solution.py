@@ -1,13 +1,5 @@
-from collections import defaultdict
-import sys
-import time
+﻿from collections import defaultdict
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.queryResults(4,[[1,4],[2,5],[1,3],[3,4]]))
-    print(time.time() - start)
-
 from typing import List
 
 class Solution:
@@ -35,9 +27,3 @@ class Solution:
             result.append(curr)
 
         return result
-
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.wordPattern("abba", "dog cat cat dog"))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def wordPattern(self, pattern: str, s: str) -> bool:
@@ -22,7 +15,3 @@ class Solution:
             if dic_s[v] != dic_t[pattern[i]]:
                 return False
         return True
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

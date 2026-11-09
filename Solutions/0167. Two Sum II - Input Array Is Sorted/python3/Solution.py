@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.twoSum([2,7,11,15], 7))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
@@ -18,7 +11,3 @@ class Solution:
                 r -= 1
             else:
                 l +=1
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

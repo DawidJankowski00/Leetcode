@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.countFairPairs([0,1,7,4,4,5], 3, 6))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def countFairPairs(self, nums: List[int], lower: int, upper: int) -> int:
@@ -28,7 +21,3 @@ class Solution:
             else:
                 r -= 1 
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

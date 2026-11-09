@@ -1,24 +1,10 @@
-from collections import deque
-import sys
-import time
+﻿from collections import deque
 from typing import List, Optional
-
 
 class ListNode:
     def __init__(self, val = 0, next = None):
         self.val = val
         self.next = next
-
-def create_list_from_list(values):
-    if not values:
-        return None  
-
-    head = ListNode(values[0])  
-    current = head
-    for value in values[1:]:
-        current.next = ListNode(value)  
-        current = current.next  
-    return head
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
@@ -32,13 +18,3 @@ class Solution:
         else:
             list2.next = self.mergeTwoLists(list1, list2.next)
             return list2
-        
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.mergeTwoLists(create_list_from_list([1,2,4]),create_list_from_list([1,3,4])))
-    print(time.time() - start)
-
-if __name__ == '__main__':
-    sys.exit(main())
-

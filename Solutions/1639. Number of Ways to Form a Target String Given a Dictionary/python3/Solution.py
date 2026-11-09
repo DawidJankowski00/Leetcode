@@ -1,12 +1,5 @@
-from collections import defaultdict
-import sys
-import time
+﻿from collections import defaultdict
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.numWays(["acca","bbbb","caca"], "aba"))
-    print(time.time() - start)
 
 class Solution:
     def numWays(self, words: List[str], target: str) -> int:
@@ -24,6 +17,3 @@ class Solution:
                 dp[j+1] += dp[j] * freq[i][target[j]]
                 dp[j+1] %= mod
         return dp[m]
-
-if __name__ == '__main__':
-    sys.exit(main())

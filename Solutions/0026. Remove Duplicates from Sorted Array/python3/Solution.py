@@ -1,8 +1,4 @@
-import sys
-from typing import List
-def main():
-    sol = Solution()
-    print(sol.removeElement([1,1,2]))
+﻿from typing import List
 
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
@@ -12,6 +8,3 @@ class Solution:
                 nums[j] = nums[i]
                 j += 1
         return j
-
-if __name__ == '__main__':
-    sys.exit(main())

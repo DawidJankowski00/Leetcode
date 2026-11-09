@@ -1,8 +1,4 @@
-import sys
-from typing import List
-def main():
-    sol = Solution()
-    print(sol.minSubArrayLen(11, [1,2,3,4,5]))
+﻿from typing import List
 
 class Solution:
     def minSubArrayLen(self, k: int, nums: List[int]) -> int:
@@ -19,9 +15,3 @@ class Solution:
                 result = min(result, r - l + 1)
                 l+= 1
         return result
-
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

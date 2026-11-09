@@ -1,13 +1,6 @@
-from collections import defaultdict, Counter
+﻿from collections import defaultdict, Counter
 import copy
-import sys
-import time
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.findSubstring("barfoothefoobarman", ["foo","bar"]))
-    print(time.time() - start)
 
 class Solution:
     def findSubstring(self, s: str, words: List[str]) -> List[int]:
@@ -37,7 +30,3 @@ class Solution:
                 if c == len(words):
                     result.append(l)
         return result
-
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.takeCharacters("aabbccca", 2))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def takeCharacters(self, s: str, k: int) -> int:
@@ -22,8 +15,3 @@ class Solution:
                 l += 1
             result = max(result, r-l+1)
         return len(s) - result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())
-

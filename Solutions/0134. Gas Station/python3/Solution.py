@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.canCompleteCircuit([1,2,3,4,5], [3,4,5,1,2]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
@@ -19,6 +12,3 @@ class Solution:
                 start = i + 1
                 current_gas = 0
         return start
-
-if __name__ == '__main__':
-    sys.exit(main())

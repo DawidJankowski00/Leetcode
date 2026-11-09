@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.smallestNumber("IIIDIDDD"))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def smallestNumber(self, pattern: str) -> str:
@@ -19,7 +12,3 @@ class Solution:
                 while st:
                     result += str(st.pop())
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

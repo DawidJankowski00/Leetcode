@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.longestCommonPrefix(["flower","flow","flight"]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
@@ -18,6 +11,3 @@ class Solution:
                 return result
             result += f[i]
         return result
-
-if __name__ == '__main__':
-    sys.exit(main())

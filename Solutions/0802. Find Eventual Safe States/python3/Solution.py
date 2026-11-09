@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.eventualSafeNodes([[1,2],[2,3],[5],[0],[5],[],[]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
@@ -27,6 +20,3 @@ class Solution:
                 result.append(i)
 
         return result
-
-if __name__ == '__main__':
-    sys.exit(main())

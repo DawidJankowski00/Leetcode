@@ -1,12 +1,5 @@
-from collections import deque
-import sys
-import time
+﻿from collections import deque
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.canBeValid("())()))()(()(((())(()()))))((((()())(())","1011101100010001001011000000110010100101"))
-    print(time.time() - start)
 
 class Solution:
     def canBeValid(self, s: str, locked: str) -> bool:
@@ -37,8 +30,3 @@ class Solution:
                 return False
 
         return True
-            
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

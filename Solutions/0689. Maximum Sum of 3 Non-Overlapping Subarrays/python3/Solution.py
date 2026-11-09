@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.maxSumOfThreeSubarrays([1,2,1,2,6,7,5,1],2))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def maxSumOfThreeSubarrays(self, nums: List[int], k: int) -> List[int]:
@@ -28,6 +21,3 @@ class Solution:
                 sum3 = sum2 + sub3
                 sub3_index = sub2_index + [i + 2*k]
         return sub3_index
-
-if __name__ == '__main__':
-    sys.exit(main())

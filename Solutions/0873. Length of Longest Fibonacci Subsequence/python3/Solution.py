@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.lenLongestFibSubseq([1,2,3,4,5,6,7,8]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def lenLongestFibSubseq(self, arr: List[int]) -> int:
@@ -24,7 +17,3 @@ class Solution:
                 if tmp != 2:
                     maxct = max(tmp, maxct)
         return maxct
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

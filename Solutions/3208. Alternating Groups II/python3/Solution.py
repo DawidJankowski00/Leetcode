@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.numberOfAlternatingGroups([0,1,0,1,0], 3))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def numberOfAlternatingGroups(self, colors: List[int], k: int) -> int:
@@ -18,7 +11,3 @@ class Solution:
             if r-l >= k-1:
                 result += 1
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

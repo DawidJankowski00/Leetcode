@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.findScore([2,1,3,4,5,2]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def findScore(self, nums: List[int]) -> int:
@@ -21,7 +14,3 @@ class Solution:
                 if i < n-1:
                     nums[i+1] = -1
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

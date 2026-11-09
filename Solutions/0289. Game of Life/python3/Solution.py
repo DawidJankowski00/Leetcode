@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.gameOfLife([[0,1,0],[0,0,1],[1,1,1],[0,0,0]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def gameOfLife(self, board: List[List[int]]) -> None:
@@ -33,8 +26,3 @@ class Solution:
                     board[i][j] = 1
                 if board[i][j] == 3:
                     board[i][j] = 0
-        
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

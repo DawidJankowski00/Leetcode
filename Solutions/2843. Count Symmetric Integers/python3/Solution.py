@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.countSymmetricIntegers(1, 100))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def countSymmetricIntegers(self, low: int, high: int) -> int:
@@ -24,7 +17,3 @@ class Solution:
             if a == b:
                 result += 1
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

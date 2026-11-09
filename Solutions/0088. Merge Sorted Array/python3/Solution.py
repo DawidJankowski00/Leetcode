@@ -1,8 +1,4 @@
-import sys
-from typing import List
-def main():
-    sol = Solution()
-    print(sol.merge([1,2,3,0,0,0], 3, [2,5,6], 3))
+﻿from typing import List
 
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
@@ -25,7 +21,3 @@ class Solution:
                 nums1[i] = nums1[m-1]
                 m -= 1
             i -= 1
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

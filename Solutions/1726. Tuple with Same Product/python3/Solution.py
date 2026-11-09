@@ -1,12 +1,5 @@
-from collections import defaultdict
-import sys
-import time
+﻿from collections import defaultdict
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.tupleSameProduct([2,3,4,6]))
-    print(time.time() - start)
 
 class Solution:
     def tupleSameProduct(self, nums: List[int]) -> int:
@@ -19,7 +12,3 @@ class Solution:
                 result += freq[tmp]
                 freq[tmp] += 1
         return result*8
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

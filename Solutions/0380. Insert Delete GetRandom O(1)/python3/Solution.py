@@ -1,12 +1,6 @@
-from collections import deque
+﻿from collections import deque
 import random
-import sys
 from typing import List
-def main():
-    sol = RandomizedSet()
-    print(sol.insert(2))
-    print(sol.getRandom())
-    print()
 
 class RandomizedSet:
     
@@ -28,7 +22,3 @@ class RandomizedSet:
 
     def getRandom(self) -> int:
         return random.choice(list(self.mySet.keys()))
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

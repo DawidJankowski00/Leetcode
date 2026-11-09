@@ -1,12 +1,5 @@
-import sys
-import time
-from typing import List
+﻿from typing import List
 from collections import Counter
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.numTilePossibilities("AAB"))
-    print(time.time() - start)
 
 class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
@@ -21,7 +14,3 @@ class Solution:
                 freq[key] += 1
             return tmp
         return count_it(freq1)
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

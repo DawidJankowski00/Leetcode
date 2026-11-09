@@ -1,8 +1,4 @@
-import sys
-from typing import List
-def main():
-    sol = Solution()
-    print(sol.shortestSubarray([2,-1,2], 3))
+﻿from typing import List
 
 class Solution:
     def shortestSubarray(self, nums: List[int], k: int) -> int:
@@ -11,11 +7,3 @@ class Solution:
                 if sum(nums[j:j+i]) >= k:
                     return i
         return -1
-
-            
-
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

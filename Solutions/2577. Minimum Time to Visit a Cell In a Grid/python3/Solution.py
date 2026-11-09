@@ -1,13 +1,6 @@
-from heapq import heappop, heappush
-import sys
-import time
+﻿from heapq import heappop, heappush
 from collections import deque
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minimumTime([[0,1,3,2],[5,1,2,5],[4,3,8,6]]))
-    print(time.time() - start)
 
 class Solution:
     def minimumTime(self, grid: List[List[int]]) -> int:
@@ -34,6 +27,3 @@ class Solution:
                         nt = max(grid[newx][newy] + wait, t + 1)
                         heappush(heap, (nt, newx, newy))
         return -1
-
-if __name__ == '__main__':
-    sys.exit(main())

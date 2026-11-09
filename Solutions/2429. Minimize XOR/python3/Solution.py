@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minimizeXor(1,12))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def minimizeXor(self, num1: int, num2: int) -> int:
@@ -20,7 +13,3 @@ class Solution:
                 result ^= 1 << i
                 ones1 += 1
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

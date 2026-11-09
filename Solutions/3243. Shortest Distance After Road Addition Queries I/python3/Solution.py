@@ -1,12 +1,5 @@
-import sys
-import time
-from collections import deque
+﻿from collections import deque
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.shortestDistanceAfterQueries(5, [[2,4],[0,2],[0,4]]))
-    print(time.time() - start)
 
 class Solution:
     def shortestDistanceAfterQueries(self, n: int, queries: List[List[int]]) -> List[int]:
@@ -33,7 +26,3 @@ class Solution:
                         visited.add(v)
 
         return result
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.firstCompleteIndex([1,3,4,2],[[1,4],[2,3]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def firstCompleteIndex(self, arr: List[int], mat: List[List[int]]) -> int:
@@ -28,7 +21,3 @@ class Solution:
             rows[r] += 1
             if rows[r] >= n:
                 return i
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

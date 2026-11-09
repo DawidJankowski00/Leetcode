@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.*****())
-    print(time.time() - start)
+﻿from typing import List
 
 class ProductOfNumbers:
 
@@ -27,7 +20,3 @@ class ProductOfNumbers:
         if len(self.stream) == k:
             return self.stream[-1]
         return self.stream[-1] // self.stream[-k -1]
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.shiftingLetters("abc", [[0,1,0],[1,2,1],[0,2,1]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def shiftingLetters(self, s: str, shifts: List[List[int]]) -> str:
@@ -25,6 +18,3 @@ class Solution:
             curr += shift[i]
             s[i] = chr(ord('a') + ((ord(s[i]) - ord('a') + curr) % 26))
         return "".join(s)
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,8 +1,4 @@
-import sys
-from typing import List
-def main():
-    sol = Solution()
-    print(sol.lengthOfLongestSubstring("abcabcbb"))
+﻿from typing import List
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
@@ -15,7 +11,3 @@ class Solution:
             max_len = max(max_len, r - l + 1)
             last_index[s[r]] = r+1
         return max_len
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

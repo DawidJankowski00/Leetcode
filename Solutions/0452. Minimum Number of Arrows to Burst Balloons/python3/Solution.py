@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.findMinArrowShots([[10,16],[2,8],[1,6],[7,12]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def findMinArrowShots(self, points: List[List[int]]) -> int:
@@ -17,8 +10,3 @@ class Solution:
                 stop = v[1]
                 result += 1
         return result
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

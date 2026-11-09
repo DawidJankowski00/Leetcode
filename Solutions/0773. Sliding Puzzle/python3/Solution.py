@@ -1,10 +1,6 @@
-from collections import deque
+﻿from collections import deque
 import copy
-import sys
 from typing import List
-def main():
-    sol = Solution()
-    print(sol.slidingPuzzle([[4,1,2],[5,0,3]]))
 
 class Solution:
     def slidingPuzzle(self, board: List[List[int]]) -> int:
@@ -70,11 +66,3 @@ class Solution:
         }
         result[position[0]][position[1]], result[position[0] + way[direction][0]][position[1] + way[direction][1]] = result[position[0] + way[direction][0]][position[1] + way[direction][1]], result[position[0]][position[1]]
         return result, [position[0] + way[direction][0], position[1] + way[direction][1]]
-
-            
-
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

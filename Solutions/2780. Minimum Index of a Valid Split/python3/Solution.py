@@ -1,12 +1,5 @@
-import sys
-import time
-from typing import List
+﻿from typing import List
 from collections import Counter, defaultdict
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minimumIndex([2,1,3,1,1,1,7,1,2,1]))
-    print(time.time() - start)
 
 class Solution:
     def minimumIndex(self, nums: List[int]) -> int:
@@ -25,7 +18,3 @@ class Solution:
             if left[element] * 2 > l_n and right[element] * 2 > r_n:
                 return i
         return -1
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

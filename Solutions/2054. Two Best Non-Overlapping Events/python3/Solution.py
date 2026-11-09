@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.maxTwoEvents([[1,3,2],[4,5,2],[2,4,3]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def maxTwoEvents(self, events: List[List[int]]) -> int:
@@ -31,5 +24,3 @@ class Solution:
                 maxSum = max(maxSum, events[i][2] + suffixMax[nextEventIndex])
             maxSum = max(maxSum, events[i][2])
         return maxSum
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.isValidSudoku([["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
@@ -24,7 +17,3 @@ class Solution:
                     if board[i][j] in box[k]: return False
                     else: box[k][board[i][j]] = 1
         return True
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

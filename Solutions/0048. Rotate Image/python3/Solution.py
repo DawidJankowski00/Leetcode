@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.rotate([[1,2,3],[4,5,6],[7,8,9]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def rotate(self, matrix: List[List[int]]) -> None:
@@ -17,8 +10,3 @@ class Solution:
         for i in range(0, m//2):
             for j in range(0, n):
                 matrix[j][i], matrix[j][m-1-i] = matrix[j][m-1-i], matrix[j][i]
-        print(matrix)
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

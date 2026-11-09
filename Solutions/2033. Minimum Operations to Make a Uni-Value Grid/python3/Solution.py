@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.minOperations([[2,4],[6,8]],2))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def minOperations(self, grid: List[List[int]], x: int) -> int:
@@ -24,8 +17,3 @@ class Solution:
         for v in values:
             result += abs(median - v) // x
         return result
-        
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

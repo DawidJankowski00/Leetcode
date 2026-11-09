@@ -1,12 +1,5 @@
-import sys
-import time
-from typing import List
+﻿from typing import List
 from collections import defaultdict
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.isIsomorphic("badc", "baba"))
-    print(time.time() - start)
 
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
@@ -20,8 +13,3 @@ class Solution:
             if dic_s[v] != dic_t[t[i]]:
                 return False
         return True
-
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

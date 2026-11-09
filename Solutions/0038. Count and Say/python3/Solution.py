@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.countAndSay(4))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def countAndSay(self, n: int) -> str:
@@ -24,7 +17,3 @@ class Solution:
                 last = tmp[i]
         new += str(ct) + last
         return new
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

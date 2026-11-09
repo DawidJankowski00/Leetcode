@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = MinStack()
-    start = time.time()
-    print(sol.*****())
-    print(time.time() - start)
+﻿from typing import List
 
 class MinStack:
 
@@ -28,6 +21,3 @@ class MinStack:
 
     def getMin(self) -> int:
         return self.min_elem[-1]
-
-if __name__ == '__main__':
-    sys.exit(main())

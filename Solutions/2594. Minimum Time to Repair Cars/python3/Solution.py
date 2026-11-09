@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.repairCars([4,2,3,1],10))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def repairCars(self, ranks: List[int], cars: int) -> int:
@@ -27,7 +20,3 @@ class Solution:
             else:
                 l = mid + 1
         return l
-        
-
-if __name__ == '__main__':
-    sys.exit(main())

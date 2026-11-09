@@ -1,12 +1,5 @@
-from collections import deque
-import sys
-import time
+﻿from collections import deque
 from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.numIslands([["1","1","1","1","0"],["1","1","0","1","0"],["1","1","0","0","0"],["0","0","0","0","0"]]))
-    print(time.time() - start)
 
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
@@ -30,6 +23,3 @@ class Solution:
                                 grid[nx][ny] = 0
                                 queue.append((nx, ny))
         return result
-
-if __name__ == '__main__':
-    sys.exit(main())

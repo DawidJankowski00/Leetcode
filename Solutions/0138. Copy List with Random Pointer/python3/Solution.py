@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List, Optional
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.*****())
-    print(time.time() - start)
+﻿from typing import List, Optional
 
 class Node:
     def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
@@ -29,6 +22,3 @@ class Solution:
             cop[curr].random = cop.get(curr.random)
             curr = curr.next
         return cop[head]
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -1,11 +1,4 @@
-import sys
-import time
-from typing import List
-def main():
-    sol = Solution()
-    start = time.time()
-    print(sol.pacificAtlantic([[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]))
-    print(time.time() - start)
+﻿from typing import List
 
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
@@ -37,7 +30,3 @@ class Solution:
             if v in p:
                 results.append(v)
         return results
-        
-
-if __name__ == '__main__':
-    sys.exit(main())
