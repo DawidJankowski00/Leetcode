@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Sample
 {
     public class Solution
-    {
+{
         public bool IsSubsequence(string s, string t)
         {
             int j = 0;

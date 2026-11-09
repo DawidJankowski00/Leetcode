@@ -4,7 +4,7 @@ from typing import List
 
 class Solution:
     def successfulPairs(self, spells: List[int], potions: List[int], success: int) -> List[int]:
-        potions.sort(reverse=True)
+        potions.sort()
         pairs = []
         n = len(potions)
         for v in spells:
