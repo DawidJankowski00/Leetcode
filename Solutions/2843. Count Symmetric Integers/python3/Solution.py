@@ -1,4 +1,4 @@
-﻿from typing import List
+from typing import List
 
 class Solution:
     def countSymmetricIntegers(self, low: int, high: int) -> int:

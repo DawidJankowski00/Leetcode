@@ -1,4 +1,4 @@
-﻿from typing import List
+from typing import List
 
 class Solution:
     def takeCharacters(self, s: str, k: int) -> int:

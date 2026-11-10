@@ -1,4 +1,4 @@
-﻿from typing import List
+from typing import List
 
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:

@@ -1,4 +1,4 @@
-﻿from collections import Counter
+from collections import Counter
 import heapq
 from typing import List
 

@@ -1,4 +1,4 @@
-﻿from functools import reduce
+from functools import reduce
 from operator import or_
 from typing import List
 

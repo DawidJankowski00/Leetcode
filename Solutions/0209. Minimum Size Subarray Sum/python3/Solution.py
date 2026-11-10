@@ -1,4 +1,4 @@
-﻿from typing import List
+from typing import List
 
 class Solution:
     def minSubArrayLen(self, k: int, nums: List[int]) -> int:

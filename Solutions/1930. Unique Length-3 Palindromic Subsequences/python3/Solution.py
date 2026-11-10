@@ -1,4 +1,4 @@
-﻿from collections import Counter, defaultdict
+from collections import Counter, defaultdict
 from email.policy import default
 from typing import List
 

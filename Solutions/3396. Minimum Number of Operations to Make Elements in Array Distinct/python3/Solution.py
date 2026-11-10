@@ -1,4 +1,4 @@
-﻿from typing import Counter, List
+from typing import Counter, List
 
 class Solution:
     def minimumOperations(self, nums: List[int]) -> int:

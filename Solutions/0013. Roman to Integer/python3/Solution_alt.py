@@ -1,4 +1,4 @@
-﻿class Solution:
+class Solution:
     def romanToInt(self, s: str) -> int:
         values = {
             "I": 1,

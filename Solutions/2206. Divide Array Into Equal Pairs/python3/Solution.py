@@ -1,4 +1,4 @@
-﻿from typing import Counter, List
+from typing import Counter, List
 
 class Solution:
     def divideArray(self, nums: List[int]) -> bool:

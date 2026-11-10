@@ -1,4 +1,4 @@
-﻿from typing import Counter, List
+from typing import Counter, List
 from itertools import product
 from collections import Counter
 from math import factorial

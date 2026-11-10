@@ -1,4 +1,4 @@
-﻿from typing import List, Optional
+from typing import List, Optional
 
 class Node:
     def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):

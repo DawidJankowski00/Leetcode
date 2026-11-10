@@ -1,4 +1,4 @@
-﻿from typing import List
+from typing import List
 
 class Solution:
     def shiftingLetters(self, s: str, shifts: List[List[int]]) -> str:

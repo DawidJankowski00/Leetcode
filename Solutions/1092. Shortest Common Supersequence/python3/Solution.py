@@ -1,4 +1,4 @@
-﻿from typing import List
+from typing import List
 
 class Solution:
     def shortestCommonSupersequence(self, text1: str, text2: str) -> str:

@@ -1,4 +1,4 @@
-﻿from typing import List
+from typing import List
 
 class Solution:
     def areAlmostEqual(self, s1: str, s2: str) -> bool:

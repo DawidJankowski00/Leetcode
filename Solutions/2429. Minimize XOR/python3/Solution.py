@@ -1,4 +1,4 @@
-﻿from typing import List
+from typing import List
 
 class Solution:
     def minimizeXor(self, num1: int, num2: int) -> int:
